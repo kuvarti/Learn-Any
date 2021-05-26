@@ -6,14 +6,15 @@ int kontrol(int deger);
 int main()
 {
     int asalmi;
-    cout<<"Bir Sayı Giriniz : ";
+    cout<<"Please enter a number : ";
     cin>>asalmi;
     
+    cout<<asalmi
     if(kontrol(asalmi)==1)
-        cout<<"Girdiğiniz sayi Asal değildir\n";
-    else cout<<"Girdiğiniz sayi Asaldır\n";
-    
-    cout<<"0dan girdiğiniz sayıya kadar olan sayılardan asal olanlar ;\n";
+        cout<<" is not prime\n";
+    else cout<<" is prime\n";
+
+    cout<<"Prime Numbers 0-"<<asalmi<<" ;\n";
     for(int i=2;i<(asalmi+1);i++){
         if( kontrol(i)==1 ){ }
         else cout<<i<<" - ";
