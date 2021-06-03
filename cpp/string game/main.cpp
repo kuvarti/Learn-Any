@@ -2,7 +2,7 @@
 #include <string.h>
 using namespace std;
 
-
+//ardışığa çevrilicek
 string mcikar(string a,int indis1, int indis2){
     string b="";
     for(int i=0;i<a.length();i++){
@@ -22,19 +22,16 @@ string cikar(string a){
             }
         }
     }
-    bool k=0;
+    string rt="";
     for(int i=0;i<a.length();i++){
-        if(a[i]==' '){
-            k=1;
-        }
+        if(a[i]!=' ')
+            rt+=a[i];
     }
-    if(k==1){
-        return "Boş küme";
-    } else return a;
+    return rt;
 }
 int main()
 {
-    string deneme="abccba";
+    string deneme="xyxyaiaaa";
     deneme=cikar(deneme);
     cout<<deneme;
 }
