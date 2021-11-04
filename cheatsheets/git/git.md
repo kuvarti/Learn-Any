@@ -13,7 +13,7 @@ Git küçük veya büyük farketmeksizin projeleri hızlı ve etkili şekilde y�
 
 ## Git Workflow(iş akışı):
 
-![alt text](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-workflow.png) "Workflow"
+![alt text](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-workflow.png "Workflow")
 
 ## **Git Config**
 git config -> Git yapılandırma ayarları bu komut üzerinden yapılır.
