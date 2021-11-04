@@ -31,9 +31,11 @@ Mevcut yapılandırmaları görüntülemek için;
 git config -l
 ```
 * Parametreler
-..* --global
+
+⋅⋅* --global
 
 Global(Genel) düzeyde ayarlamalar kullanıcıya özeldir, yani bir işletim sistemi kullanıcısına uygulanır. Global ayarlamalar kullanıcının 'home' dizininde depolanır.
 
-..* --system
+⋅⋅* --system
+
 System(Sistem) düzeyinde ayarlamalar tüm makineye uygulanır. Bu işletim sistemindeki bütün kullanıcıları ve bütn repo'ları kapsar. system ayarlamaları makinenin 'root' dizininde depolanır.
