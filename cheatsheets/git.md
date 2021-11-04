@@ -24,6 +24,7 @@ Git Workflow(iş akışı):
 	  |		  |		    |
 
 Git Config;
+
 git config -> Git yapılandırma ayarları bu komut üzerinden yapılır.
 
 Mevcut yapılandırmaları görüntülemek için;
@@ -34,8 +35,8 @@ git config -l
 
 ⋅⋅* --global
 
-Global(Genel) düzeyde ayarlamalar kullanıcıya özeldir, yani bir işletim sistemi kullanıcısına uygulanır. Global ayarlamalar kullanıcının 'home' dizininde depolanır.
+⋅⋅⋅Global(Genel) düzeyde ayarlamalar kullanıcıya özeldir, yani bir işletim sistemi kullanıcısına uygulanır. Global ayarlamalar kullanıcının 'home' dizininde depolanır.⋅⋅
 
 ⋅⋅* --system
 
-System(Sistem) düzeyinde ayarlamalar tüm makineye uygulanır. Bu işletim sistemindeki bütün kullanıcıları ve bütn repo'ları kapsar. system ayarlamaları makinenin 'root' dizininde depolanır.
+⋅⋅⋅System(Sistem) düzeyinde ayarlamalar tüm makineye uygulanır. Bu işletim sistemindeki bütün kullanıcıları ve bütn repo'ları kapsar. system ayarlamaları makinenin 'root' dizininde depolanır.⋅⋅
