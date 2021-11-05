@@ -3,15 +3,15 @@ Git küçük veya büyük farketmeksizin projeleri hızlı ve etkili şekilde y�
 
 ## **Kavramlar**
 
-**Repository(Repo)**: Repository genel olarak bütün dosyalarımız ve bilgilerinin bulunduğu bir depodur.
+**Repository(Repo):** Repository genel olarak bütün dosyalarımız ve bilgilerinin bulunduğu bir depodur.
 
-**Working Directory**: Çalışma dizini. Repo burada bulunur ve bu alanda çalışırız.
+**Working Directory:** Çalışma dizini. Repo burada bulunur ve bu alanda çalışırız.
 
-**Staging Area**: Proje dosyalarımızdaki değişiklikleri yeni versiyon olarak eklemeden önce kayıt altında tuttuğumuz alan.
+**Staging Area:** Proje dosyalarımızdaki değişiklikleri yeni versiyon olarak eklemeden önce kayıt altında tuttuğumuz alan.
 
-**Commit**: Git'e eklenen dosyaları kalıcı olarak repoya işlemeye commit denir.
+**Commit:** Git'e eklenen dosyaları kalıcı olarak repoya işlemeye commit denir.
 
-## Git Workflow(iş akışı):
+### **Git Workflow(iş akışı):**
 
 ![alt text](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-workflow.png "Workflow")
 
@@ -32,7 +32,7 @@ Mevcut yapılandırmaları görüntülemek için;
 ```
 git config -l
 ```
-## Parametreler
+### **Parametreler**
 
   * ### **--global**
 	Global(Genel) düzeyde ayarlamalar kullanıcıya özeldir, yani bir işletim sistemi kullanıcısına uygulanır. Global ayarlamalar kullanıcının 'home' dizininde depolanır.
@@ -43,3 +43,5 @@ git config -l
 	System(Sistem) düzeyinde ayarlamalar tüm makineye uygulanır. Bu işletim sistemindeki bütün kullanıcıları ve bütn repo'ları kapsar. system ayarlamaları makinenin 'root' dizininde depolanır.
 
 			git config --system ...
+
+## **Branch**
