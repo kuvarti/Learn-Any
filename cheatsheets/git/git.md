@@ -48,10 +48,14 @@ git config --list
 ## **Branch/Merge**
 
 ![alt text](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-branchsheme.png "branch sheme")
+\
+&nbsp;
+Branch projeyi dallara ayırmamızı sağlar. Ana projeden bir dal ayırarak eklemek istediğimiz özelliği ana programa zarar vermeden, ayrı bir dalda ekleyip test edip eğer problemsiz çalışıyorsa ana programa sonradan eklememize yardımcı olur.
+\
+&nbsp;
+Merge ise herhangi bir brach'de yaptığımız değişiklikleri master branch'imiz ile birleştirme veya master branch'e entegre etme işlemidir.
 
 * ## Branch
-
-	Branch projeyi dallara ayırmamızı sağlar. Ana projeden bir dal ayırarak eklemek istediğimiz özelliği ana programa zarar vermeden, ayrı bir dalda ekleyip test edip eğer problemsiz çalışıyorsa ana programa sonradan eklememize yardımcı olur.
 
 	Mevcut brancleri görmek için bunlardan birisini yazabiliriz;
 
@@ -62,7 +66,13 @@ git config --list
 
 		git branch <isim>
 
+	Branch silmek için;
+
+		git branch -d <isim>
+
 	Branchler arası geçiş için;
 
 		git checkout <isim>
+
+* ## Merge
 
