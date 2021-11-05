@@ -28,9 +28,10 @@ git işlemlerine başlamadan loglarda tutulabilmesi için kullanıcı adı ve ma
 
 \
 &nbsp;
-Mevcut yapılandırmaları görüntülemek için;
+Mevcut yapılandırmaları görüntülemek için bunlardan birisini yazabiliriz;
 ```
 git config -l
+git config --list
 ```
 ### **Parametreler**
 
@@ -44,4 +45,24 @@ git config -l
 
 			git config --system ...
 
-## **Branch**
+## **Branch/Merge**
+
+![alt text](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-branchsheme.png "branch sheme")
+
+* ## Branch
+
+	Branch projeyi dallara ayırmamızı sağlar. Ana projeden bir dal ayırarak eklemek istediğimiz özelliği ana programa zarar vermeden, ayrı bir dalda ekleyip test edip eğer problemsiz çalışıyorsa ana programa sonradan eklememize yardımcı olur.
+
+	Mevcut brancleri görmek için bunlardan birisini yazabiliriz;
+
+		git branch -l
+		git branch --list
+
+	Yeni branch eklemek için;
+
+		git branch <isim>
+
+	Branchler arası geçiş için;
+
+		git checkout <isim>
+
