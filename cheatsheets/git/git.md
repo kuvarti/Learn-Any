@@ -1,4 +1,5 @@
 # **GIT**
+&nbsp;&nbsp;&nbsp;
 Git küçük veya büyük farketmeksizin projeleri hızlı ve etkili şekilde yöneten bir açık kaynak kodlu ücretsiz dağıtılmış kontrol sistemidir.
 
 Bir klasör'ün git tarafından kontrol edilmesini istiyorsak o klasöre gidip;
@@ -60,7 +61,7 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
  * **git rm** -> Git'e eklenen dosyaları siler.
 
 		git rm <dosya> <dosya> ...
- * **git commit** -> Git'e eklenen dosyaları commit eder(Onaylar).
+ * **git commit** -> Git'e eklenen dosyaları commit eder.
 
 		git commit -m "<commit mesajı>"
  * **git status** -> Git'e eklenen dosyaların durumunu gösterir.
@@ -79,10 +80,10 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 \
 &nbsp;&nbsp;&nbsp;
 **Branch** projeyi dallara ayırmamızı sağlar. Ana projeden bir dal ayırarak eklemek istediğimiz özelliği ana programa zarar vermeden, ayrı bir dalda ekleyip test edip eğer problemsiz çalışıyorsa ana programa sonradan eklememize yardımcı olur.
-\
+
 &nbsp;&nbsp;&nbsp;
 **Merge** ise herhangi bir brach'de yaptığımız değişiklikleri master branch'imiz ile birleştirme veya master branch'e entegre etme işlemidir.
-\
+
 &nbsp;&nbsp;&nbsp;
 **HEAD** basitçe 'commit' referansıdır. HEAD'in değeri o anki commit'in referansıdır.
 
@@ -106,7 +107,7 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 		git checkout <isim>
 
 * ## Merge
-	&nbsp;&nbsp;&nbsp;
+
 	İlk önce birleştirilecek branch'e gidip daha sonra
 
 		git merge <Branch adı>
