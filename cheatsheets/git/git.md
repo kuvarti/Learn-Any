@@ -1,6 +1,11 @@
 # **GIT**
 Git küçük veya büyük farketmeksizin projeleri hızlı ve etkili şekilde yöneten bir açık kaynak kodlu ücretsiz dağıtılmış kontrol sistemidir.
 
+Bir klasör'ün git tarafından kontrol edilmesini istiyorsak o klasöre gidip;
+
+	git init
+yazarak mevcut dizin ve alt dizinleri git kontrolüne alırız.
+
 ## **Kavramlar**
 
 **Repository(Repo):** Repository genel olarak bütün dosyalarımız ve bilgilerinin bulunduğu bir depodur.
@@ -45,15 +50,41 @@ git config --list
 
 			git config --system ...
 
+## **Basics**
+
+&nbsp;&nbsp;&nbsp;
+Başlangıç seviyesi için bilinmesi gereken komutlar;
+ * **git add** -> Git'e eklenecek dosyaların listesini belirtir.
+
+		git add <dosya> <dosya> ...
+ * **git rm** -> Git'e eklenen dosyaları siler.
+
+		git rm <dosya> <dosya> ...
+ * **git commit** -> Git'e eklenen dosyaları commit eder(Onaylar).
+
+		git commit -m "<commit mesajı>"
+ * **git status** -> Git'e eklenen dosyaların durumunu gösterir.
+
+		git status
+ * **git log** -> Git'e eklenen dosyaların commit loglarını gösterir.
+
+		git log
+ * **git checkout** -> Git'e eklenen dosyaların durumunu geri alır veya branch değiştirir.
+
+		git checkout <commit>
+
 ## **Branch/Merge**
 
 ![alt text](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-branchsheme.png "branch sheme")
 \
-&nbsp;
-Branch projeyi dallara ayırmamızı sağlar. Ana projeden bir dal ayırarak eklemek istediğimiz özelliği ana programa zarar vermeden, ayrı bir dalda ekleyip test edip eğer problemsiz çalışıyorsa ana programa sonradan eklememize yardımcı olur.
+&nbsp;&nbsp;&nbsp;
+**Branch** projeyi dallara ayırmamızı sağlar. Ana projeden bir dal ayırarak eklemek istediğimiz özelliği ana programa zarar vermeden, ayrı bir dalda ekleyip test edip eğer problemsiz çalışıyorsa ana programa sonradan eklememize yardımcı olur.
 \
-&nbsp;
-Merge ise herhangi bir brach'de yaptığımız değişiklikleri master branch'imiz ile birleştirme veya master branch'e entegre etme işlemidir.
+&nbsp;&nbsp;&nbsp;
+**Merge** ise herhangi bir brach'de yaptığımız değişiklikleri master branch'imiz ile birleştirme veya master branch'e entegre etme işlemidir.
+\
+&nbsp;&nbsp;&nbsp;
+**HEAD** basitçe 'commit' referansıdır. HEAD'in değeri o anki commit'in referansıdır.
 
 * ## Branch
 
@@ -68,11 +99,24 @@ Merge ise herhangi bir brach'de yaptığımız değişiklikleri master branch'im
 
 	Branch silmek için;
 
-		git branch -d <isim>
+		git branch -d <isim> <isim> ...
 
 	Branchler arası geçiş için;
 
 		git checkout <isim>
 
 * ## Merge
+	&nbsp;&nbsp;&nbsp;
+	İlk önce birleştirilecek branch'e gidip daha sonra
 
+		git merge <Branch adı>
+	Yazarak birleştirebiliriz. ÖR:
+
+		git merge web
+	Yazarak "web" branch'ini o an bulunduğum branch ile birleştirdim.
+
+\
+&nbsp;&nbsp;&nbsp;
+Git üzerinden branch/merge ağını grafiksel olarak görmek için "git a dog";
+
+	git log --all --decorate --oneline --graph
