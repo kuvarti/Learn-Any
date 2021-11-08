@@ -19,7 +19,7 @@ yazarak mevcut dizin ve alt dizinleri git kontrolüne alırız.
 
 ### **Git Workflow(iş akışı):**
 
-![alt text](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-workflow.png "Workflow")
+![Workflow](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-workflow.png "Workflow")
 
 ## **Git Config**
 git config -> Git yapılandırma ayarları bu komut üzerinden yapılır.
@@ -47,7 +47,7 @@ git config --list
 			git config --global ...
 
   * ### **--system**
-	System(Sistem) düzeyinde ayarlamalar tüm makineye uygulanır. Bu işletim sistemindeki bütün kullanıcıları ve bütn repo'ları kapsar. system ayarlamaları makinenin 'root' dizininde depolanır.
+	System(Sistem) düzeyinde ayarlamalar tüm makineye uygulanır. Bu işletim sistemindeki bütün kullanıcıları ve bütün repo'ları kapsar. system ayarlamaları makinenin 'root' dizininde depolanır.
 
 			git config --system ...
 
@@ -76,8 +76,8 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 
 ## **Branch/Merge**
 
-![alt text](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-branchsheme.png "branch sheme")
-\
+![branch sheme](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-branchsheme.png "branch sheme")
+
 &nbsp;&nbsp;&nbsp;
 **Branch** projeyi dallara ayırmamızı sağlar. Ana projeden bir dal ayırarak eklemek istediğimiz özelliği ana programa zarar vermeden, ayrı bir dalda ekleyip test edip eğer problemsiz çalışıyorsa ana programa sonradan eklememize yardımcı olur.
 
@@ -89,10 +89,10 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 
 * ## Branch
 
-	Mevcut brancleri görmek için bunlardan birisini yazabiliriz;
+	Mevcut brancleri görmek için;
 
-		git branch -l
-		git branch --list
+		git branch -l -a
+
 
 	Yeni branch eklemek için;
 
@@ -115,6 +115,21 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 
 		git merge web
 	Yazarak "web" branch'ini o an bulunduğum branch ile birleştirdim.
+
+	Eğer birleştirme işlemi başarısız olursa;
+
+		git merge --abort
+
+	###	Merge Türleri
+	*	#### Fast Forward
+		![merge ff](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-mergeff.png "merge ff")
+\
+&nbsp;&nbsp;&nbsp;
+		En yaygın ve varsayılan merge türüdür. Git'e eklenen dosyaların commit loglarının aynısını kullanarak birleştirir. Eski kodlarda bir değişiklik olmaz. Geçmişi tek çizgi olarak gösterir. Kod:
+
+			git rebase <Branch adı>
+
+
 
 \
 &nbsp;&nbsp;&nbsp;
