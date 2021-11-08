@@ -152,6 +152,11 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 
 			git merge -s ours <branch1> <branch2> <branchN>
 
+	*	#### Octopus
+		![octopus](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git/git-mergeoctopus.png "octopus")
+\
+&nbsp;&nbsp;&nbsp;
+
 \
 &nbsp;&nbsp;&nbsp;
 Git üzerinden branch/merge ağını grafiksel olarak görmek için "git a dog";
