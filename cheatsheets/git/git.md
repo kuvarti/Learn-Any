@@ -76,7 +76,7 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 
 ## **Branch/Merge**
 
-![branch sheme](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git/git-branchsheme.png "branch sheme")
+![branch sheme](../IMGs/git/git-branchsheme.png "branch sheme")
 
 &nbsp;&nbsp;&nbsp;
 **Branch** projeyi dallara ayırmamızı sağlar. Ana projeden bir dal ayırarak eklemek istediğimiz özelliği ana programa zarar vermeden, ayrı bir dalda ekleyip test edip eğer problemsiz çalışıyorsa ana programa sonradan eklememize yardımcı olur.
@@ -156,6 +156,7 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 		![octopus](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git/git-mergeoctopus.png "octopus")
 \
 &nbsp;&nbsp;&nbsp;
+
 
 \
 &nbsp;&nbsp;&nbsp;
