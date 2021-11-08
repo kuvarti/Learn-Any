@@ -144,6 +144,14 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 		| Çizgisel geçmiş | | Commit 2 ebevenyi gösterir |
 		| Merge commiti bulunmaz | | Merge commiti bulunur |
 
+	*	#### Ours
+		![ours](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-mergeours.png "ours")
+\
+&nbsp;&nbsp;&nbsp;
+		Ours 1den fazla branchde çalışır. Merge sonucu çıktısı her zaman mevcut branch'in HEADinkidir, diğer dallardan gelen tüm değişiklikleri yok sayar. Ours terimi, diğer tüm dallardan gelen tüm değişiklikleri etkin bir şekilde göz ardı eden tercihi ifade eder. Benzer özelliğin branchlerinin geçmişini birleştirmek için kullanılması amaçlanmıştır.
+
+			git merge -s ours <branch1> <branch2> <branchN>
+
 \
 &nbsp;&nbsp;&nbsp;
 Git üzerinden branch/merge ağını grafiksel olarak görmek için "git a dog";
