@@ -19,7 +19,7 @@ yazarak mevcut dizin ve alt dizinleri git kontrolüne alırız.
 
 ### **Git Workflow(iş akışı):**
 
-![Workflow](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-workflow.png "Workflow")
+![Workflow](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git/git-workflow.png "Workflow")
 
 ## **Git Config**
 git config -> Git yapılandırma ayarları bu komut üzerinden yapılır.
@@ -76,7 +76,7 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 
 ## **Branch/Merge**
 
-![branch sheme](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-branchsheme.png "branch sheme")
+![branch sheme](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git/git-branchsheme.png "branch sheme")
 
 &nbsp;&nbsp;&nbsp;
 **Branch** projeyi dallara ayırmamızı sağlar. Ana projeden bir dal ayırarak eklemek istediğimiz özelliği ana programa zarar vermeden, ayrı bir dalda ekleyip test edip eğer problemsiz çalışıyorsa ana programa sonradan eklememize yardımcı olur.
@@ -122,7 +122,7 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 
 	###	Merge Türleri
 	*	#### Fast Forward
-		![merge ff](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-mergeff.png "merge ff")
+		![merge ff](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git/git-mergeff.png "merge ff")
 \
 &nbsp;&nbsp;&nbsp;
 		En yaygın merge türüdür. Git'e eklenen dosyaların commit loglarının aynısını kullanarak birleştirir. Eski kodlarda bir değişiklik olmaz. Geçmişi tek çizgi olarak gösterir.
@@ -130,7 +130,7 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 			git rebase <Branch adı>
 
 	*	#### Recursive
-		![merge recursive](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-mergerecursive.png "merge recursive")
+		![merge recursive](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git/git-mergerecursive.png "merge recursive")
 \
 &nbsp;&nbsp;&nbsp;
 		Recursice 2 HEAD üzerinde çalışır. Recursive yeniden adlandırma içeren birleştirmeleri algılayabilir ve işleyebilir, ancak algılanan kopyaları kullanamaz. Bir dalı çekme veya birleştirme yaparken varsayılan olarak kullanılır.
@@ -145,10 +145,10 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 		| Merge commiti bulunmaz | | Merge commiti bulunur |
 
 	*	#### Ours
-		![ours](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-mergeours.png "ours")
+		![ours](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git/git-mergeours.png "ours")
 \
 &nbsp;&nbsp;&nbsp;
-		Ours 1den fazla branchde çalışır. Merge sonucu çıktısı her zaman mevcut branch'in HEADinkidir, diğer dallardan gelen tüm değişiklikleri yok sayar. Ours terimi, diğer tüm dallardan gelen tüm değişiklikleri etkin bir şekilde göz ardı eden tercihi ifade eder. Benzer özelliğin branchlerinin geçmişini birleştirmek için kullanılması amaçlanmıştır.
+		Ours 1den fazla branchde çalışır. Merge sonucu çıktısı her zaman mevcut branch'in HEADinkidir. Sadece ortak noktaları merge eder diğer dallardan gelen tüm değişiklikleri yok sayar.
 
 			git merge -s ours <branch1> <branch2> <branchN>
 
