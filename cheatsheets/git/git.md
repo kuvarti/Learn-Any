@@ -125,7 +125,7 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 		![merge ff](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-mergeff.png "merge ff")
 \
 &nbsp;&nbsp;&nbsp;
-		En yaygın merge türüdür. Git'e eklenen dosyaların commit loglarının aynısını kullanarak birleştirir. Eski kodlarda bir değişiklik olmaz. Geçmişi tek çizgi olarak gösterir. Kod:
+		En yaygın merge türüdür. Git'e eklenen dosyaların commit loglarının aynısını kullanarak birleştirir. Eski kodlarda bir değişiklik olmaz. Geçmişi tek çizgi olarak gösterir.
 
 			git rebase <Branch adı>
 
@@ -149,3 +149,12 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 Git üzerinden branch/merge ağını grafiksel olarak görmek için "git a dog";
 
 	git log --all --decorate --oneline --graph
+
+## Kaynaklar
+
+* https://aliozgur.gitbooks.io/git101/content/branching_dallanma_ve_merging_birlestirme/degisiklikleri_merge_etmek.html
+* https://qastack.info.tr/programming/2304087/what-is-head-in-git
+* https://medium.com/nafidurmus/git-ile-dallanma-branching-ve-birleştirme-merging-olayları-da805501cc61
+* https://www.mobilhanem.com/git-merge-dallari-birlestirelim/
+* https://www.atlassian.com/git/tutorials/using-branches/merge-strategy
+* https://www.geeksforgeeks.org/merge-strategies-in-git/
