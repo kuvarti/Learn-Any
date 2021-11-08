@@ -125,11 +125,24 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 		![merge ff](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-mergeff.png "merge ff")
 \
 &nbsp;&nbsp;&nbsp;
-		En yaygın ve varsayılan merge türüdür. Git'e eklenen dosyaların commit loglarının aynısını kullanarak birleştirir. Eski kodlarda bir değişiklik olmaz. Geçmişi tek çizgi olarak gösterir. Kod:
+		En yaygın merge türüdür. Git'e eklenen dosyaların commit loglarının aynısını kullanarak birleştirir. Eski kodlarda bir değişiklik olmaz. Geçmişi tek çizgi olarak gösterir. Kod:
 
 			git rebase <Branch adı>
 
+	*	#### Recursive
+		![merge recursive](https://github.com/kuvarti/Learn-Any/blob/main/cheatsheets/IMGs/git-mergerecursive.png "merge recursive")
+\
+&nbsp;&nbsp;&nbsp;
+		Recursice 2 HEAD üzerinde çalışır. Recursive yeniden adlandırma içeren birleştirmeleri algılayabilir ve işleyebilir, ancak algılanan kopyaları kullanamaz. Bir dalı çekme veya birleştirme yaparken varsayılan olarak kullanılır.
 
+			git merge -s recursive <branch1> <branch2>
+
+		 ####	**Fast-Forward vs Recursive**
+		| Fast-Forward | vs | Recursive |
+		| :---------- | :-: | -----------: |
+		| Masterda yeni commit olmaz | | Masterda commit olur |
+		| Çizgisel geçmiş | | Commit 2 ebevenyi gösterir |
+		| Merge commiti bulunmaz | | Merge commiti bulunur |
 
 \
 &nbsp;&nbsp;&nbsp;
