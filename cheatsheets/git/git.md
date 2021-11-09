@@ -160,7 +160,7 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 
 			git merge -s octopus <branch1> <branch2> <branchN>
 	*	#### Resolve
-		![resolve](../IMGs/git/git-mergeresolve.png "resolve")
+		![resolve](https://media.geeksforgeeks.org/wp-content/uploads/20191231173643/Resolve-Merge-Strategy.png "resolve")
 \
 &nbsp;&nbsp;&nbsp;
 		Resolve '3-way merge' algoritmasını kullanarak sadece 2 tane Headi çözer. Çapraz merge belirsizliklerini dikkatlice tespit etmeye çalışır. Genellikle güvenli ve hızlı olarak kabul edilir.
