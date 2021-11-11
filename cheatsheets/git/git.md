@@ -176,13 +176,49 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 		 eğer B, A'nın alt ağacına karşılık geliyorsa B, A'nın ağaç yapısını yansıtacak şekilde güncellenir, Bu güncelleme ayrıca A ve B arasında paylaşılan ortak ata ağacına da yapılır.
 
 		 	git merge -s subtree <branchA> <branchB>
-
 \
 &nbsp;&nbsp;&nbsp;
-Git üzerinden branch/merge ağını grafiksel olarak görmek için "git a dog";
-
+	Git üzerinden branch/merge ağını grafiksel olarak görmek için "git a dog";
 	git log --all --decorate --oneline --graph
 
+## **Conflict**(Çakışma)
+&nbsp;&nbsp;&nbsp;
+	Conflict'ler _(çakışma (lar))_ Farklı Branchlerde aynı dosyada aynı satırlarda değişiklik yapıldıktan sonra Merge etmeye çalışırken karşımıza çıkar. Bir conflict ile karşılaştığınızda şuna benzer birşey yazar.
+```
+Auto-merging <File>
+CONFLICT (content): Merge conflict in <File>
+Automatic merge failed; fix conflicts and then commit the result.
+```
+&nbsp;
+	Burada yapmamız gereken. ```<File>``` ile belirtilen dosyayı açıp conflict durumunu çözmek. problem karşımıza şu şekilde gelicektir.
+```c
+<<<<<<< HEAD
+	printf("merhaba");
+=======
+	printf("merhaba dünya");
+>>>>>>> <branch>
+```
+&nbsp;
+	Bu noktada '```<<<<<<< HEAD```' ile '```=======```' arasında kalan kısım, kodun HEAD deki yani bulunduğumuz committeki versiyonu gösterir. '```=======```' ile '```>>>>>>> <branch>```' arasında kalan kısım ise kodların ```<branch>```deki versiyonunu gösterir. İkisinden birini veya ikisini birden seçerek düzenleyip daha sonra commit attığımızda conflict'i çözeriz. Ör olarak Çözülmesi Gereken Konflict'i yukarıdaki örnek olarak referans alırsak;
+
+Sadece ```HEAD```i seçersek;
+```c
+	printf("merhaba");
+```
+Sadece ```<Branch>```i seçersek;
+```c
+	printf("merhaba dünya");
+```
+İkisini birden seçersek;
+```c
+	printf("merhaba");
+	printf("merhaba dünya");
+```
+olarak bırakmamız yeterli. Kalan çakışma sonucu alanları da sildikten sonra commitlenmeye hazır.
+\
+\
+\
+&nbsp;
 ## Kaynaklar
 
 * https://aliozgur.gitbooks.io/git101/content/branching_dallanma_ve_merging_birlestirme/degisiklikleri_merge_etmek.html
