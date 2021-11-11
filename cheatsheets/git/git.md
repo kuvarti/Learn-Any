@@ -180,7 +180,9 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 &nbsp;&nbsp;&nbsp;
 	Git üzerinden branch/merge ağını grafiksel olarak görmek için "git a dog";
 
-		git log --all --decorate --oneline --graph
+```
+git log --all --decorate --oneline --graph
+```
 
 ## **Conflict**(Çakışma)
 &nbsp;&nbsp;&nbsp;
