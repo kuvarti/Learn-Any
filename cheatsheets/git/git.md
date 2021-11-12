@@ -20,8 +20,6 @@ yazarak mevcut dizin ve alt dizinleri git kontrolüne alırız.
 ### **Git Workflow(iş akışı):**
 
 ![Workflow](../IMGs/git/git-workflow.png "Workflow")
-\
-&nbsp;
 ## **Git Config**
 git config -> Git yapılandırma ayarları bu komut üzerinden yapılır.
 \
@@ -51,8 +49,7 @@ git config --list
 	System(Sistem) düzeyinde ayarlamalar tüm makineye uygulanır. Bu işletim sistemindeki bütün kullanıcıları ve bütün repo'ları kapsar. system ayarlamaları makinenin 'root' dizininde depolanır.
 
 		git config --system ...
-\
-&nbsp;
+
 ## **Basics**
 
 &nbsp;&nbsp;&nbsp;
@@ -75,8 +72,7 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
  * **git checkout** -> Git'e eklenen dosyaların durumunu geri alır veya branch değiştirir.
 
 		git checkout <commit>
-\
-&nbsp;
+
 ## **Branch/Merge**
 
 ![branch sheme](../IMGs/git/git-branchsheme.png "branch sheme")
@@ -199,8 +195,6 @@ git rebase <branch>
 ```
 git log --all --decorate --oneline --graph
 ```
-\
-&nbsp;
 ## **Conflict**(Çakışma)
 &nbsp;&nbsp;&nbsp;
 	Conflict'ler _(çakışma (lar))_ Farklı Branchlerde aynı dosyada aynı satırlarda değişiklik yapıldıktan sonra Merge etmeye çalışırken karşımıza çıkar. Bir conflict ile karşılaştığınızda şuna benzer birşey yazar.
