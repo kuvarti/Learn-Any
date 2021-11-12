@@ -20,7 +20,8 @@ yazarak mevcut dizin ve alt dizinleri git kontrolüne alırız.
 ### **Git Workflow(iş akışı):**
 
 ![Workflow](../IMGs/git/git-workflow.png "Workflow")
-
+\
+&nbsp;
 ## **Git Config**
 git config -> Git yapılandırma ayarları bu komut üzerinden yapılır.
 \
@@ -44,13 +45,14 @@ git config --list
   * ### **--global**
 	Global(Genel) düzeyde ayarlamalar kullanıcıya özeldir, yani bir işletim sistemi kullanıcısına uygulanır. Global ayarlamalar kullanıcının 'home' dizininde depolanır.
 
-			git config --global ...
+		git config --global ...
 
   * ### **--system**
 	System(Sistem) düzeyinde ayarlamalar tüm makineye uygulanır. Bu işletim sistemindeki bütün kullanıcıları ve bütün repo'ları kapsar. system ayarlamaları makinenin 'root' dizininde depolanır.
 
-			git config --system ...
-
+		git config --system ...
+\
+&nbsp;
 ## **Basics**
 
 &nbsp;&nbsp;&nbsp;
@@ -73,7 +75,8 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
  * **git checkout** -> Git'e eklenen dosyaların durumunu geri alır veya branch değiştirir.
 
 		git checkout <commit>
-
+\
+&nbsp;
 ## **Branch/Merge**
 
 ![branch sheme](../IMGs/git/git-branchsheme.png "branch sheme")
@@ -127,7 +130,7 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 &nbsp;&nbsp;&nbsp;
 		En yaygın merge türüdür. Git'e eklenen dosyaların commit loglarının aynısını kullanarak birleştirir. Eski kodlarda bir değişiklik olmaz. Geçmişi tek çizgi olarak gösterir.
 
-			git rebase <Branch adı>
+			git merge <Branch adı>
 
 	*	#### Recursive
 		![merge recursive](../IMGs/git/git-mergerecursive.png "merge recursive")
@@ -161,7 +164,7 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 			git merge -s octopus <branch1> <branch2> <branchN>
 	*	#### Resolve
 		![resolve](https://media.geeksforgeeks.org/wp-content/uploads/20191231173643/Resolve-Merge-Strategy.png "resolve")
-		resim linki: https://www.geeksforgeeks.org/merge-strategies-in-git/
+		[resim linki](https://www.geeksforgeeks.org/merge-strategies-in-git/)
 \
 &nbsp;&nbsp;&nbsp;
 		Resolve '3-way merge' algoritmasını kullanarak sadece 2 tane Headi çözer. Çapraz merge belirsizliklerini dikkatlice tespit etmeye çalışır. Genellikle güvenli ve hızlı olarak kabul edilir.
@@ -176,6 +179,19 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 		 eğer B, A'nın alt ağacına karşılık geliyorsa B, A'nın ağaç yapısını yansıtacak şekilde güncellenir, Bu güncelleme ayrıca A ve B arasında paylaşılan ortak ata ağacına da yapılır.
 
 		 	git merge -s subtree <branchA> <branchB>
+## **Rebase**
+![rebase](../IMGs/git/git-rebase.png "rebase")
+\
+&nbsp;&nbsp;&nbsp;
+	```Git Rebase``` ile ```Git Merge``` benzer işlevleri yapmak için kullanılıyor. Temel olarak 2side bir Branchdeki değişiklikleri diğerine aktarmak için kullanılıyor.
+\
+&nbsp;&nbsp;&nbsp;
+	Merge ile birleştirme yapıldığında loglarda Merge işlemini gösteren bir commit bulunurken, Rebase ile yapıldığında loglarda sanki 2 Branchdeki değişiklikler tek branchde yapılmış gibi gözükür.
+```
+git rebase <branch>
+```
+### **Merge vs Rebase**
+![Rebase vs Merge](../IMGs/git/git-rebasevsmerge.png "Rebase vs Merge")
 \
 &nbsp;&nbsp;&nbsp;
 	Git üzerinden branch/merge ağını grafiksel olarak görmek için "git a dog";
@@ -183,7 +199,8 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 ```
 git log --all --decorate --oneline --graph
 ```
-
+\
+&nbsp;
 ## **Conflict**(Çakışma)
 &nbsp;&nbsp;&nbsp;
 	Conflict'ler _(çakışma (lar))_ Farklı Branchlerde aynı dosyada aynı satırlarda değişiklik yapıldıktan sonra Merge etmeye çalışırken karşımıza çıkar. Bir conflict ile karşılaştığınızda şuna benzer birşey yazar.
@@ -217,7 +234,7 @@ Sadece ```<Branch>```i seçersek;
 	printf("merhaba");
 	printf("merhaba dünya");
 ```
-olarak bırakmamız yeterli. Kalan çakışma sonucu alanları da sildikten sonra commitlenmeye hazır.
+olarak bırakmamız yeterli. Kalan çakışma sonucu alanları da sildikten sonra commitlenmeye hazır. Conflictleri daha rahat çözmek için VS Code gibi text editörler kullanabilirsiniz.
 \
 \
 \
