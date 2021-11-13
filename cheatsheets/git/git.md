@@ -30,7 +30,11 @@ git işlemlerine başlamadan loglarda tutulabilmesi için kullanıcı adı ve ma
 
 	git config <Parametre> user.name "<isim>"
 	git config <Parametre> user.mail "<mail>"
-
+&nbsp;
+	Commitler vs.. için mesaj editörü eklemek için;
+```
+git config <parametre> core.editor "<program>"
+```
 \
 &nbsp;
 Mevcut yapılandırmaları görüntülemek için bunlardan birisini yazabiliriz;
@@ -241,3 +245,4 @@ olarak bırakmamız yeterli. Kalan çakışma sonucu alanları da sildikten sonr
 * https://www.mobilhanem.com/git-merge-dallari-birlestirelim/
 * https://www.atlassian.com/git/tutorials/using-branches/merge-strategy
 * https://www.geeksforgeeks.org/merge-strategies-in-git/
+* https://aliozgur.gitbooks.io/git101/content/alistirmalar/Gun_10.html
