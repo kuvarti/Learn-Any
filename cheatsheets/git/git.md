@@ -105,7 +105,7 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 
 	Branch silmek için;
 
-		git branch -d <isim> <isim> ...
+		git branch -d <isim> <isim> <isimN>
 
 	Branchler arası geçiş için;
 
@@ -235,7 +235,45 @@ Sadece ```<Branch>```i seçersek;
 	printf("merhaba dünya");
 ```
 olarak bırakmamız yeterli. Kalan çakışma sonucu alanları da sildikten sonra commitlenmeye hazır. Conflictleri daha rahat çözmek için VS Code gibi text editörler kullanabilirsiniz.
-\
+
+
+## **Diff**
+&nbsp;&nbsp;&nbsp;
+Git diff kısaca commitler arası değişiklikleri farklılıkları görmek için kullanılır. Bütün commitfarklılıklarını  veya sadece tek bir dosyadaki farklılıkları görebiriz.
+
+* Commit edilmiş dosyalardaki farkları görmek için.
+	```
+	git log -p
+	```
+* Staging area'ya eklenmiş ama commit edilmemiş dosyalardaki farka bakmak için.
+	```
+	git diff --staged
+	```
+* Commitler arasındaki farklılıkları görmek için.
+	```
+	git diff <commit1> <commit2> <commitN>
+	```
+* Commitler arasındaki belirli dosyaların farklarını görmek için.
+	```
+	git diff <commit1> <commit2> <commitN> <dosya1> <dosya2> <dosyaN>
+	```
+
+### **Format**
+Git diff bize sonucu belirli bir formatta verir. Bu format:
+![diff](../IMGs/git/git-diff.png "diff")
+Numaralarla hangi bölgenin neyi ifade ettiği aşağıda;
+1. Bu bölgede gösterilen, hangi dosyaların karşılaştırıldığıdır.
+	>Bu bilginin hemen altında index ile başlayan satırda pratik olarak pek işinize yaramayacak dosya bilgileri yer alır.
+2. Hangi kısımların hangi dosyaya ait olduğunu göstermek için kullanılır.
+	>Benim örneğimde ```---``` olan yerler a/M1.txt'ye ait, ```+++``` olan yerler ise b/M1.txt'ye ait.
+3. Diff 2 dosyanın tamamını değil sadece değişen kısımlarını gösterir. ```@@``` ile başlayan satırlarda 2 dosya arasındaki farkın kaçıncı satırdan başlayıp kaç satır devam ettiğini belirtir.
+	>(-) ile gösterilen '-' ile belirtilen dosyayı,(+) ile gösterilen '+' ile belirtilen dosyaya ait bilgilerdir. bizim örneğimizde '-'de yani a/M1.txt'de 1. satırda, '+'da yani b/M1.txt'de 1. satırda değişiklik yapılmıştır. Farklı bir örenek için; ```@@ -5,3 +5,5 @@``` ele alırsak - tarafta 5. satırdan başlayıp 3 satır değişiklik, + tarafta 5. satırdan başlayarak 5 satır değişiklik yapılmıştır.
+4. Farklılıkların yer aldığı satırları gösterir.
+	>(-) olan kısımlar a/M1.txt'de, (+) olan kısımlar b/M1.txt'de değişiklikleri gösterir.
+
+_**Dipnot**_
+>_Bu komut yerine kullanılabilecek [meld](https://meldmerge.org) gibi toollarda mevcut. Meld'i difftool olarak ayarlamak için [tıklayabilirsiniz](https://stackoverflow.com/questions/34119866/setting-up-and-using-meld-as-your-git-difftool-and-mergetool)._
+
 \
 \
 &nbsp;
@@ -248,3 +286,4 @@ olarak bırakmamız yeterli. Kalan çakışma sonucu alanları da sildikten sonr
 * https://www.atlassian.com/git/tutorials/using-branches/merge-strategy
 * https://www.geeksforgeeks.org/merge-strategies-in-git/
 * https://aliozgur.gitbooks.io/git101/content/alistirmalar/Gun_10.html
+* https://aliozgur.gitbooks.io/git101/content/ileri_seviye_komutlar_ve_islemler/diff_ile_farklari_incelemek.html
