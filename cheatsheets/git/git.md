@@ -1,3 +1,15 @@
+<style>
+	@font-face{
+	   font-family: 'firacode';
+	   src: url('../font/FiraCode-Medium.ttf');
+   }
+* {
+  font-stle: "../font/FiraCode-Medium.ttf";
+  font-size: 20;
+}
+</style>
+<span style="font-family: 'firacode';">
+
 # **GIT**
 &nbsp;&nbsp;&nbsp;
 Git küçük veya büyük farketmeksizin projeleri hızlı ve etkili şekilde yöneten bir açık kaynak kodlu ücretsiz dağıtılmış kontrol sistemidir.
@@ -15,7 +27,7 @@ yazarak mevcut dizin ve alt dizinleri git kontrolüne alırız. Eğer başarıl�
 
 **Staging Area:** Proje dosyalarımızdaki değişiklikleri yeni versiyon olarak eklemeden önce kayıt altında tuttuğumuz alan.
 
-**Commit:** Git'e eklenen dosyaları kalıcı olarak repoya işlemeye commit denir.
+**Commit:** Dosyaları kalıcı olarak repoya işlemeye commit denir.
 
 ### **Git Workflow(iş akışı):**
 
@@ -42,7 +54,7 @@ Mevcut yapılandırmaları görüntülemek için bunlardan birisini yazabiliriz;
 git config -l
 git config --list
 ```
-### **Parametreler**
+### Parametreler
 
   * ### **--global**
 	Global(Genel) düzeyde ayarlamalar kullanıcıya özeldir, yani bir işletim sistemi kullanıcısına uygulanır. Global ayarlamalar kullanıcının 'home' dizininde depolanır.
@@ -58,13 +70,13 @@ git config --list
 
 &nbsp;&nbsp;&nbsp;
 Başlangıç seviyesi için bilinmesi gereken komutlar;
- * **git add** -> Git'e eklenecek dosyaların listesini belirtir.
+ * **git add** -> Dosyaların Staging Area'ya aktarır.
 
 		git add <dosya> <dosya> ...
  * **git rm** -> Git'e eklenen dosyaları siler.
 
 		git rm <dosya> <dosya> ...
- * **git commit** -> Git'e eklenen dosyaları commit eder.
+ * **git commit** -> Staging Area'daki dosyaları commit eder.
 
 		git commit -m "<commit mesajı>"
  * **git status** -> Git'e eklenen dosyaların durumunu gösterir.
@@ -76,10 +88,16 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
  * **git checkout** -> Git'e eklenen dosyaların durumunu geri alır veya branch değiştirir.
 
 		git checkout <commit>
-	### **.gitignore**
+ *	### **.gitignore**
 	&nbsp;&nbsp;&nbsp;Klasörün içindeki bazı dosyaları git'in umursamamasını(yok saymasını) istediğimiz zaman gitignore tam aradığımız şey. ```.gitignore``` adında bir dosya oluşturup içine satırlar halinde yoksaymak istediğimiz dosyaları yazabiliriz.
+ *	## **git restore**
+	&nbsp;&nbsp;&nbsp;Git Restore-> Staging Area'daki commit edilmemiş dosyaları geri çekmemizi veya localdeki değişiklikleri son commmit'e kadar geri almamızı sağlar.
+	```
+	git restore <dosya1> <dosya2> <dosyaN>
+	```
 
-## **Branch/Merge**
+## **Branching**
+
 
 ![branch sheme](../IMGs/git/git-branchsheme.png "branch sheme")
 
@@ -105,7 +123,7 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 
 	Branch silmek için;
 
-		git branch -d <isim> <isim> <isimN>
+		git branch -d <isim1> <isim2> <isimN>
 
 	Branchler arası geçiş için;
 
@@ -181,22 +199,23 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 		 eğer B, A'nın alt ağacına karşılık geliyorsa B, A'nın ağaç yapısını yansıtacak şekilde güncellenir, Bu güncelleme ayrıca A ve B arasında paylaşılan ortak ata ağacına da yapılır.
 
 		 	git merge -s subtree <branchA> <branchB>
-## **Rebase**
-![rebase](../IMGs/git/git-rebase.png "rebase")
+*	## **Rebase**
+	![rebase](../IMGs/git/git-rebase.png "rebase")
 \
 &nbsp;&nbsp;&nbsp;
 	```Git Rebase``` ile ```Git Merge``` benzer işlevleri yapmak için kullanılıyor. Temel olarak 2side bir Branchdeki değişiklikleri diğerine aktarmak için kullanılıyor.
 \
 &nbsp;&nbsp;&nbsp;
 	Merge ile birleştirme yapıldığında loglarda Merge işlemini gösteren bir commit bulunurken, Rebase ile yapıldığında loglarda sanki 2 Branchdeki değişiklikler tek branchde yapılmış gibi gözükür.
-```
-git rebase <branch>
-```
-### **Merge vs Rebase**
-![Rebase vs Merge](../IMGs/git/git-rebasevsmerge.png "Rebase vs Merge")
+	```
+	git rebase <branch>
+	```
+	### **Merge vs Rebase**
+	![Rebase vs Merge](../IMGs/git/git-rebasevsmerge.png "Rebase vs Merge")
 \
 &nbsp;&nbsp;&nbsp;
-	Git üzerinden branch/merge ağını grafiksel olarak görmek için "git a dog";
+
+Git üzerinden branching ağını grafiksel olarak görmek için "git a dog";
 
 ```
 git log --all --decorate --oneline --graph
@@ -273,7 +292,7 @@ Numaralarla hangi bölgenin neyi ifade ettiği aşağıda;
 
 _**Dipnot**_
 >_Bu komut yerine kullanılabilecek [meld](https://meldmerge.org) gibi toollarda mevcut. Meld'i difftool olarak ayarlamak için [tıklayabilirsiniz](https://stackoverflow.com/questions/34119866/setting-up-and-using-meld-as-your-git-difftool-and-mergetool)._
-
+</span>
 \
 \
 &nbsp;
@@ -287,3 +306,4 @@ _**Dipnot**_
 * https://www.geeksforgeeks.org/merge-strategies-in-git/
 * https://aliozgur.gitbooks.io/git101/content/alistirmalar/Gun_10.html
 * https://aliozgur.gitbooks.io/git101/content/ileri_seviye_komutlar_ve_islemler/diff_ile_farklari_incelemek.html
+* https://www.git-tower.com/learn/git/commands/git-restore
