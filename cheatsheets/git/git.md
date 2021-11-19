@@ -1,15 +1,3 @@
-<style>
-	@font-face{
-	   font-family: 'firacode';
-	   src: url('../font/FiraCode-Medium.ttf');
-   }
-* {
-  font-stle: "../font/FiraCode-Medium.ttf";
-  font-size: 20;
-}
-</style>
-<span style="font-family: 'firacode';">
-
 # **GIT**
 &nbsp;&nbsp;&nbsp;
 Git küçük veya büyük farketmeksizin projeleri hızlı ve etkili şekilde yöneten bir açık kaynak kodlu ücretsiz dağıtılmış kontrol sistemidir.
@@ -294,14 +282,46 @@ _**Dipnot**_
 >_Bu komut yerine kullanılabilecek [meld](https://meldmerge.org) gibi toollarda mevcut. Meld'i difftool olarak ayarlamak için [tıklayabilirsiniz](https://stackoverflow.com/questions/34119866/setting-up-and-using-meld-as-your-git-difftool-and-mergetool)._
 
 ## **Stash**
+![stash](../IMGs/git/git-stash.png "stash")
+&nbsp;&nbsp;&nbsp;
+Git stash ile üzerinde çalıştığınız ancak henüz commit etmediğiniz değişikliklerin geçici olarak Git tarafından kayıt altına alınmasını ve aktif branch'inizin herhangi bir değişikliğin olmadığı temiz bir duruma getirilmesini sağlarsınız.
+```
+git stash
+```
+
+değişiklikleri geçici depoda tutar. ona default olarak açıklama verilir. Bu genelde son commit'in ismidir. Kendine özgü bir açıklama ile oluşmasını istiyorsak;
+```
+git stash -m "<mesaj>"
+```
+
+Bütün stashleri listelemek için;
+```
+git stash list
+```
+
+Listenin en üstündeki değişikliği depodan geri almak için;
+```
+git stash pop
+```
+
+Değişikliği depodan silmeden çekmek için;
+```
+git stash apply <stash isim>
+```
+
+Herhangi bir değişikliği depodan silmek için;
+```
+git stash drop <stash isim>
+```
+
 
 \
 \
 &nbsp;
 ## Kaynaklar
 
-* https://aliozgur.gitbooks.io/git101/content/branching_dallanma_ve_merging_birlestirme/degisiklikleri_merge_etmek.html
 * https://qastack.info.tr/programming/2304087/what-is-head-in-git
+* https://aliozgur.gitbooks.io/git101/content/branching_dallanma_ve_merging_birlestirme/degisiklikleri_merge_etmek.html
 * https://medium.com/nafidurmus/git-ile-dallanma-branching-ve-birleştirme-merging-olayları-da805501cc61
 * https://www.mobilhanem.com/git-merge-dallari-birlestirelim/
 * https://www.atlassian.com/git/tutorials/using-branches/merge-strategy
@@ -309,3 +329,5 @@ _**Dipnot**_
 * https://aliozgur.gitbooks.io/git101/content/alistirmalar/Gun_10.html
 * https://aliozgur.gitbooks.io/git101/content/ileri_seviye_komutlar_ve_islemler/diff_ile_farklari_incelemek.html
 * https://www.git-tower.com/learn/git/commands/git-restore
+* https://aliozgur.gitbooks.io/git101/content/branching_dallanma_ve_merging_birlestirme/degisikliklerinizi_gecici_olarak_kaydetmek_-_git_stash.html
+* https://www.atlassian.com/git/tutorials/saving-changes/git-stash
