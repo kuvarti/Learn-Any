@@ -90,11 +90,15 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 		git checkout <commit>
  *	### **.gitignore**
 	&nbsp;&nbsp;&nbsp;Klasörün içindeki bazı dosyaları git'in umursamamasını(yok saymasını) istediğimiz zaman gitignore tam aradığımız şey. ```.gitignore``` adında bir dosya oluşturup içine satırlar halinde yoksaymak istediğimiz dosyaları yazabiliriz.
- *	## **git restore**
-	&nbsp;&nbsp;&nbsp;Git Restore-> Staging Area'daki commit edilmemiş dosyaları geri çekmemizi veya localdeki değişiklikleri son commmit'e kadar geri almamızı sağlar.
-	```
-	git restore <dosya1> <dosya2> <dosyaN>
-	```
+ *	### **git restore**
+	* **Git Restore** -> Localdeki değişiklikleri son commmit'e kadar geri almamızı sağlar.
+		```
+		git restore <dosya1> <dosya2> <dosyaN>
+		```
+	* **--staged** -> Staging Area'daki commit edilmemiş dosyaları geri çekmemizi sağlar.
+		```
+		git restore --staged <dosya1> <dosya2> <dosyaN>
+		```
 
 ## **Branching**
 
@@ -231,11 +235,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 &nbsp;
 	Burada yapmamız gereken. ```<File>``` ile belirtilen dosyayı açıp conflict durumunu çözmek. problem karşımıza şu şekilde gelicektir.
 ```c
-<<<<<<< HEAD
-	printf("merhaba");
-=======
 	printf("merhaba dünya");
->>>>>>> <branch>
 ```
 &nbsp;
 	Bu noktada '```<<<<<<< HEAD```' ile '```=======```' arasında kalan kısım, kodun HEAD deki yani bulunduğumuz committeki versiyonu gösterir. '```=======```' ile '```>>>>>>> <branch>```' arasında kalan kısım ise kodların ```<branch>```deki versiyonunu gösterir. İkisinden birini veya ikisini birden seçerek düzenleyip daha sonra commit attığımızda conflict'i çözeriz. Ör olarak Çözülmesi Gereken Konflict'i yukarıdaki örnek olarak referans alırsak;
@@ -292,7 +292,9 @@ Numaralarla hangi bölgenin neyi ifade ettiği aşağıda;
 
 _**Dipnot**_
 >_Bu komut yerine kullanılabilecek [meld](https://meldmerge.org) gibi toollarda mevcut. Meld'i difftool olarak ayarlamak için [tıklayabilirsiniz](https://stackoverflow.com/questions/34119866/setting-up-and-using-meld-as-your-git-difftool-and-mergetool)._
-</span>
+
+## **Stash**
+
 \
 \
 &nbsp;
