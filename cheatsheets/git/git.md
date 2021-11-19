@@ -79,14 +79,16 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
  *	### **.gitignore**
 	&nbsp;&nbsp;&nbsp;Klasörün içindeki bazı dosyaları git'in umursamamasını(yok saymasını) istediğimiz zaman gitignore tam aradığımız şey. ```.gitignore``` adında bir dosya oluşturup içine satırlar halinde yoksaymak istediğimiz dosyaları yazabiliriz.
  *	### **git restore**
-	* **Git Restore** -> Localdeki değişiklikleri son commmit'e kadar geri almamızı sağlar.
-		```
-		git restore <dosya1> <dosya2> <dosyaN>
-		```
-	* **--staged** -> Staging Area'daki commit edilmemiş dosyaları geri çekmemizi sağlar.
-		```
-		git restore --staged <dosya1> <dosya2> <dosyaN>
-		```
+	_(Bu özellik hala geliştirilme aşamasında; davranışı değişebilir)_)
+
+* **Git Restore** -> Localdeki değişiklikleri son commmit'e kadar geri almamızı sağlar.
+	```
+	git restore <dosya1> <dosya2> <dosyaN>
+	```
+* **--staged** -> Staging Area'daki commit edilmemiş dosyaları geri çekmemizi sağlar.
+	```
+	git restore --staged <dosya1> <dosya2> <dosyaN>
+	```
 
 ## **Branching**
 
@@ -212,6 +214,12 @@ Git üzerinden branching ağını grafiksel olarak görmek için "git a dog";
 ```
 git log --all --decorate --oneline --graph
 ```
+## **Chery-Pick**
+&nbsp;&nbsp;&nbsp;
+Bir commiti başka bir branche kopyalamaya yarar.
+```
+git cherry-pick <commit Hash>
+```
 ## **Conflict**(Çakışma)
 &nbsp;&nbsp;&nbsp;
 	Conflict'ler _(çakışma (lar))_ Farklı Branchlerde aynı dosyada aynı satırlarda değişiklik yapıldıktan sonra Merge etmeye çalışırken karşımıza çıkar. Bir conflict ile karşılaştığınızda şuna benzer birşey yazar.
@@ -313,7 +321,6 @@ Herhangi bir değişikliği depodan silmek için;
 ```
 git stash drop <stash isim>
 ```
-
 
 \
 \
