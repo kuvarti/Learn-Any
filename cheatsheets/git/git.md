@@ -322,7 +322,45 @@ Herhangi bir değişikliği depodan silmek için;
 git stash drop <stash isim>
 ```
 
-\
+# **GIT Server Senkronizasyonu**
+![remote](../IMGs/git/git-remote.png "remote")
+&nbsp;&nbsp;&nbsp;
+Buraya kadar git'i sadece kendi bilgisayarımızda kullandık, ancak Birden fazla kişi çalışıyorsanız git'i uzak sunucu ile beraber kullanabilirsiniz. Dosyalar uzak bir sunucuda saklanır. Siz bu sunucuya değişikliklerinizi (_commitlerinizi_) İterek (PUSH Request) veya sunucuya başkaları tarafından gönderilen değişiklikleri (_commitleri_) çekerek (PULL Request) kendi bilgisayarınızdaki repository'e yükleyebilirsiniz.
+## **Git Clone**
+&nbsp;&nbsp;&nbsp;
+Git Clone ile uzak sunucudaki repository'i kendi bilgisayarınızda kopyalayabilirsiniz. İlk defa kopyalarken clone kullanılır daha sonra uzak sunucudaki değişiklikleri yapmak için Pull işlemi yeterlidir.
+* Uzak sunucyu koplamak için;
+	```
+	git clone <URL>
+	```
+* Uzak sunucuyu specifik bir klasörde kopyalamak için;
+	```
+	git clone <URL> <klasör>
+	```
+*
+## **Git Remote**
+&nbsp;&nbsp;&nbsp;
+Git Remote uzak sunucudaki repositoryleri oluşturmanıza, görüntülemenize ve silmenize olanak tanır.
+
+* Bağlantı kurulan Sunucuları görüntülemek için; _(daha ayrıntılı görmek için '-v' eklenebilir)_
+	```
+	git remote
+	```
+* Uzak sunucuya bağlanmak için;
+	```
+	git remote add <remote ismi> <URL>
+	```
+* Bağlantıyı kaldırmak için;
+	```
+	git remote rm <remote ismi>
+	```
+* Bağlantı ismini değiştirmek için;
+	```
+	git remote rename <eski remote ismi> <yeni remote ismi>
+	```
+
+## **git fetch/git push/ git pull**<!--bu isim değişecek-->
+
 \
 &nbsp;
 ## Kaynaklar
@@ -338,3 +376,4 @@ git stash drop <stash isim>
 * https://www.git-tower.com/learn/git/commands/git-restore
 * https://aliozgur.gitbooks.io/git101/content/branching_dallanma_ve_merging_birlestirme/degisikliklerinizi_gecici_olarak_kaydetmek_-_git_stash.html
 * https://www.atlassian.com/git/tutorials/saving-changes/git-stash
+* https://www.atlassian.com/git/tutorials/syncing
