@@ -70,9 +70,21 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
  * **git log** -> Git'e eklenen dosyaların commit loglarını gösterir.
 
 		git log
- * **git checkout** -> Git'e eklenen dosyaların durumunu geri alır, branch veya tag değiştirir.
-
+ *	### **.gitignore**
+	&nbsp;&nbsp;&nbsp;Klasörün içindeki bazı dosyaları git'in umursamamasını(yok saymasını) istediğimiz zaman gitignore tam aradığımız şey. ```.gitignore``` adında bir dosya oluşturup içine satırlar halinde yoksaymak istediğimiz dosyaları yazabiliriz.
+ * ### **git checkout/Reset**
+   * **Checkout** -> Git'e eklenen dosyaların durumunu geri alır, branch veya tag değiştirir.
+		```
 		git checkout <commit/branch>
+		```
+   * **Reset** -> Eski kommitlere tamamen geri dönmemizi sağlar.
+		```
+		git reset <parametre> <commit>
+		```
+		İşimize yarayan 3 tane parametresi var;
+		* **--hard** -> Seçtiğimiz commit ve sonraki bütün commitleri tamamen silip dosyalarda yaptığımız değişiklikleri de tamamen geri alır.
+		* **--mixed** -> Seçtiğimiz commit ve sonraki bütün commitleri tamamen siler. Dosyalardaki değişiklikler gitmez ancak untracked hale gelirler.
+		* **--soft** -> Seçtiğimiz commit ve sonraki bütün commitleri tamamen siler. Değiştirilmiş dosyalar da bozulmadan Git’e eklenmiş hale gelecektir.
  * ### **git commit**
 	Staging Area'daki dosyaları commit eder.
 	```
@@ -82,8 +94,6 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 		```
 		git commit --amend -m "<commit mesajı>"
 		```
- *	### **.gitignore**
-	&nbsp;&nbsp;&nbsp;Klasörün içindeki bazı dosyaları git'in umursamamasını(yok saymasını) istediğimiz zaman gitignore tam aradığımız şey. ```.gitignore``` adında bir dosya oluşturup içine satırlar halinde yoksaymak istediğimiz dosyaları yazabiliriz.
  *	### **git restore**
 	_(Bu özellik hala geliştirilme aşamasında; davranışı değişebilir)_)
 
@@ -361,7 +371,6 @@ Git Clone ile uzak sunucudaki repository'i kendi bilgisayarınızda kopyalayabil
 	```
 	git clone <URL> <klasör>
 	```
-*
 ## **Git Remote**
 &nbsp;&nbsp;&nbsp;
 Git Remote uzak sunucudaki repositoryleri oluşturmanıza, görüntülemenize ve silmenize olanak tanır.
