@@ -64,30 +64,54 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
  * **git rm** -> Git'e eklenen dosyaları siler.
 
 		git rm <dosya> <dosya> ...
- * **git commit** -> Staging Area'daki dosyaları commit eder.
-
-		git commit -m "<commit mesajı>"
  * **git status** -> Git'e eklenen dosyaların durumunu gösterir.
 
 		git status
  * **git log** -> Git'e eklenen dosyaların commit loglarını gösterir.
 
 		git log
- * **git checkout** -> Git'e eklenen dosyaların durumunu geri alır veya branch değiştirir.
+ * **git checkout** -> Git'e eklenen dosyaların durumunu geri alır, branch veya tag değiştirir.
 
-		git checkout <commit>
+		git checkout <commit/branch>
+ * ### **git commit**
+	Staging Area'daki dosyaları commit eder.
+	```
+	git commit -m "<commit mesajı>"
+	```
+	* **amend** -> Son commit açıklamasını değiştirir.
+		```
+		git commit --amend -m "<commit mesajı>"
+		```
  *	### **.gitignore**
 	&nbsp;&nbsp;&nbsp;Klasörün içindeki bazı dosyaları git'in umursamamasını(yok saymasını) istediğimiz zaman gitignore tam aradığımız şey. ```.gitignore``` adında bir dosya oluşturup içine satırlar halinde yoksaymak istediğimiz dosyaları yazabiliriz.
  *	### **git restore**
 	_(Bu özellik hala geliştirilme aşamasında; davranışı değişebilir)_)
 
-* **Git Restore** -> Localdeki değişiklikleri son commmit'e kadar geri almamızı sağlar.
+	* **Git Restore** -> Localdeki değişiklikleri son commmit'e kadar geri almamızı sağlar.
+		```
+		git restore <dosya1> <dosya2> <dosyaN>
+		```
+	* **--staged** -> Staging Area'daki commit edilmemiş dosyaları geri çekmemizi sağlar.
+		```
+		git restore --staged <dosya1> <dosya2> <dosyaN>
+		```
+ * ### **Git tag**
+	Bulunan commmit'e bit tag oluşturur. _(bu tag versiyon ismi olabilir)_
+	* **Lightweight** -> Lightweight tag metadata(herhangi bir açıklama vs..) girmeden kullanılan taglardır.
+		```
+		git tag <isim>
+		```
+	* **Annotated** -> Açıklamalı tag luşturmak için kullanılır.
+		```
+		git tag -a <isim> -m "<açıklama>"
+		```
+	tagları görüntülemek için;
 	```
-	git restore <dosya1> <dosya2> <dosyaN>
+	git tag
 	```
-* **--staged** -> Staging Area'daki commit edilmemiş dosyaları geri çekmemizi sağlar.
+	tagları silmek için
 	```
-	git restore --staged <dosya1> <dosya2> <dosyaN>
+	git tag -d <ismi>
 	```
 
 ## **Branching**
@@ -102,7 +126,7 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 **Merge** ise herhangi bir brach'de yaptığımız değişiklikleri master branch'imiz ile birleştirme veya master branch'e entegre etme işlemidir.
 
 &nbsp;&nbsp;&nbsp;
-**HEAD** basitçe 'commit' referansıdır. HEAD'in değeri o anki commit'in referansıdır.
+**HEAD** Üzerinde bulunduğunuz branchteki en son alınan commite denir.
 
 * ## Branch
 
@@ -359,7 +383,35 @@ Git Remote uzak sunucudaki repositoryleri oluşturmanıza, görüntülemenize ve
 	git remote rename <eski remote ismi> <yeni remote ismi>
 	```
 
-## **git fetch/git push/ git pull**<!--bu isim değişecek-->
+## **Fetch - Pull - Push**<!--bu isim değişecek-->
+
+*	### **Fetch**
+	&nbsp;&nbsp;&nbsp;
+	Git Fetch uzak sunucudaki değişiklikleri kendi bilgisayarınızda yükler. Gelen değişiklikleri kendimiz elimizle merge ederiz.
+	```
+	git fetch <remote ismi>
+	```
+*	### **Pull**
+	&nbsp;&nbsp;&nbsp;
+	Git Pull = Fetch + Merge diyebiliriz. Değişiklikleri uzak sunucudan çeker ve onu merge eder.
+	```
+	git pull <remote ismi>
+	```
+*	### **Push**
+	&nbsp;&nbsp;&nbsp;
+	Git Push Localdeki değişiklikleri uzak sunucuya gönderir.
+	```
+	git push <remote ismi>
+	```
+	Git Tagları Uzak sunucuya göndermek için
+	```
+	git push <remote> <branch> <tag ismi>
+	```
+	Git amend işlemi sonrası değişikliği uzak sunucuya göndermek için.
+	```
+	git push <remote> <branch> --force
+	```
+
 
 \
 &nbsp;
@@ -377,3 +429,4 @@ Git Remote uzak sunucudaki repositoryleri oluşturmanıza, görüntülemenize ve
 * https://aliozgur.gitbooks.io/git101/content/branching_dallanma_ve_merging_birlestirme/degisikliklerinizi_gecici_olarak_kaydetmek_-_git_stash.html
 * https://www.atlassian.com/git/tutorials/saving-changes/git-stash
 * https://www.atlassian.com/git/tutorials/syncing
+* https://medium.com/@mustafazahidefe/git-notları-7-git-reset-6fefc9835cbe
