@@ -3,35 +3,35 @@
 Python Nesne Tabanlı, Yorumsal, Modüler ve Etkileşimli, Yüksek seviyeli bir dildir. Python programlama dilini kullanarak; Yapay Zeka, Veri Bilimi, Blockchain, Robotik, Siber Güvenlik, Gümülü Sistem, Web Programlama, Oyun Programlama ve Aklınıza gelebilecek birçok şey yapılabillir.
 # **Veri Tipleri**
 ## **Temel Veri Tipleri**
-* ## type()
+* ### type()
 	objelerin tiplerini gösteren bir gömülü fonkiyondur.
 	```Python
 	>>> a = 2
 	>>> type(a)
 	<class 'int'>
 	```
-* ## Integer
+* ### Integer
 	tamsayı değişkenleri tutar.
 	```Python
 	>>> a = 2
 	>>> type(a)
 	<class 'int'>
 	```
-* ## Float
+* ### Float
 	ondalık sayı değişkenleri tutar.
 	```Python
 	>>> a = 2.5
 	>>> type(a)
 	<class 'float'>
 	```
-* ## Boolean
+* ### Boolean
 	True veya False değişkenleri tutar.
 	```Python
 	>>> a = True
 	>>> type(a)
 	<class 'bool'>
 	```
-* ## String
+* ### String
 	karakter dizileri tutar. Stringlerin içeriği immutable (değiştirilemez) olarak tanımlanır. _İndexlenebilirler_
 	```Python
 	>>> a = "Python"
@@ -39,7 +39,7 @@ Python Nesne Tabanlı, Yorumsal, Modüler ve Etkileşimli, Yüksek seviyeli bir 
 	<class 'str'>
 	```
 ## **Listeler**
-* ## İndexleme
+* ### İndexleme
 	Liste elemanlarına erişebilmek için indexleri kullanılırız. İndex belirtmek için ```<degisken>[<index>]``` syntaxını kullanırız. Biraz örnek vermek gerekirse;
 	```Python
 	>>> a = [1,2,3,4,5,6,7,8,9,10]
@@ -72,14 +72,14 @@ Python Nesne Tabanlı, Yorumsal, Modüler ve Etkileşimli, Yüksek seviyeli bir 
 	>>> a[::-1]	# Elemanları sondan başa yazar.
 	[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 	```
-* ## len()
+* ### len()
 	Liste elemanlarının sayısını gösteren bir gömülü fonksiyon.
 	```Python
 	>>> a = [1,2,3,4,5,6,7,8,9,10]
 	>>> len(a)
 	10
 	```
-* ## List
+* ### List
 	Listelerde birden fazla elemanı tek isimde tutabiliriz. Elemanlara indexleme yoluyla ulaşırız.
 
 	* **Kullanımı;**
@@ -97,6 +97,12 @@ Python Nesne Tabanlı, Yorumsal, Modüler ve Etkileşimli, Yüksek seviyeli bir 
 		[1, 2, [1, 2, 3], 'Python', True, False]
 		>>> a[2]
 		[1, 2, 3]
+		```
+	* **Elemanın listede olup olmadığı sorgulamak için** _NOT: True veya False döner_
+		```Phyton
+		>>> a = [1,2,3,4,5]
+		>>> 3 in a
+		true
 		```
 	* **Aynı elemandan kaç tane tuttuğunu görmek için**
 		```Python
@@ -225,4 +231,25 @@ Python Nesne Tabanlı, Yorumsal, Modüler ve Etkileşimli, Yüksek seviyeli bir 
 			>>> a.sorted()
 			[1, 2, 3, 4, 5]
 			```
+* ### Tuple
+	Tuple'lar Listeler gibi birden fazla elemanı tek isimde tutabiliriz, ama sonradan eleman ekleyemeyiz veya elemanları değiştiremeyiz. Elemanlara indexleme yoluyla ulaşırız.
 
+	* **Kullanımı**
+		```Phyton
+		>>> a = (1,2,3,4,5)
+		>>> a
+		(1, 2, 3, 4, 5)
+		>>> a[2]
+		3
+		```
+	* Tuple kullanarak elemanların yerini değiştirmek
+		```Python
+		>>> a = 5
+		>>> b = 10
+		>>> (a, b) = (b, a)
+		>>> a
+		10
+		>>> b
+		5
+		```
+# Kampüs projeleri için ertelendi..
