@@ -363,9 +363,13 @@ Buraya kadar git'i sadece kendi bilgisayarımızda kullandık, ancak Birden fazl
 ## **Git Clone**
 &nbsp;&nbsp;&nbsp;
 Git Clone ile uzak sunucudaki repository'i kendi bilgisayarınızda kopyalayabilirsiniz. İlk defa kopyalarken clone kullanılır daha sonra uzak sunucudaki değişiklikleri yapmak için Pull işlemi yeterlidir.
-* Uzak sunucyu koplamak için;
+* Uzak sunucuyu koplamak için;
 	```
 	git clone <URL>
+	```
+	Sunucudan branchimizi kopyalamak için;
+	```
+	git clone -b <branch>
 	```
 * Uzak sunucuyu specifik bir klasörde kopyalamak için;
 	```
