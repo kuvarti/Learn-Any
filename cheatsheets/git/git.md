@@ -265,7 +265,12 @@ Automatic merge failed; fix conflicts and then commit the result.
 &nbsp;
 	Burada yapmamız gereken. ```<File>``` ile belirtilen dosyayı açıp conflict durumunu çözmek. problem karşımıza şu şekilde gelicektir.
 ```c
+	<<<<<<< HEAD
+	printf("merhaba")
+	=======
 	printf("merhaba dünya");
+	>>>>>>> <branch>
+
 ```
 &nbsp;
 	Bu noktada '```<<<<<<< HEAD```' ile '```=======```' arasında kalan kısım, kodun HEAD deki yani bulunduğumuz committeki versiyonu gösterir. '```=======```' ile '```>>>>>>> <branch>```' arasında kalan kısım ise kodların ```<branch>```deki versiyonunu gösterir. İkisinden birini veya ikisini birden seçerek düzenleyip daha sonra commit attığımızda conflict'i çözeriz. Ör olarak Çözülmesi Gereken Konflict'i yukarıdaki örnek olarak referans alırsak;
