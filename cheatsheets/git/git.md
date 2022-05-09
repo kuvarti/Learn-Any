@@ -248,12 +248,6 @@ Git üzerinden branching ağını grafiksel olarak görmek için "git a dog";
 ```
 git log --all --decorate --oneline --graph
 ```
-## **Chery-Pick**
-&nbsp;&nbsp;&nbsp;
-Bir commiti başka bir branche kopyalamaya yarar.
-```
-git cherry-pick <commit Hash>
-```
 ## **Conflict**(Çakışma)
 &nbsp;&nbsp;&nbsp;
 	Conflict'ler _(çakışma (lar))_ Farklı Branchlerde aynı dosyada aynı satırlarda değişiklik yapıldıktan sonra Merge etmeye çalışırken karşımıza çıkar. Bir conflict ile karşılaştığınızda şuna benzer birşey yazar.
@@ -290,6 +284,20 @@ Sadece ```<Branch>```i seçersek;
 ```
 olarak bırakmamız yeterli. Kalan çakışma sonucu alanları da sildikten sonra commitlenmeye hazır. Conflictleri daha rahat çözmek için VS Code gibi text editörler kullanabilirsiniz.
 
+## **Submodule**
+&nbsp;&nbsp;&nbsp;
+Git Branch; aktif reponun icerisinde baska bir git reposu acmaya yarar. Normal sartlar altinda bir git reposu icerisinde baska bir git reposu konulursa ana git reposu icerisinde alt git reposu olursa, ana git alt git klasorunun icerisindekileri gormez. Bunun icin alt repolari submodule ile eklemek gerekir ve oradaki dosyalar yine ust repoladan farkli olarak tutulur.
+```bash
+git submodule add <options> <url> <path>
+```
+
+
+## **Chery-Pick**
+&nbsp;&nbsp;&nbsp;
+Bir commiti başka bir branche kopyalamaya yarar.
+```
+git cherry-pick <commit Hash>
+```
 
 ## **Diff**
 &nbsp;&nbsp;&nbsp;
