@@ -22,9 +22,7 @@ yazarak mevcut dizin ve alt dizinleri git kontrolüne alırız. Eğer başarıl�
 ![Workflow](../IMGs/git/git-workflow.png "Workflow")
 ## **Git Config**
 git config -> Git yapılandırma ayarları bu komut üzerinden yapılır.
-\
-&nbsp;
-\
+
 &nbsp;
 git işlemlerine başlamadan loglarda tutulabilmesi için kullanıcı adı ve mail adresi girilmelidir.
 
@@ -35,7 +33,6 @@ git işlemlerine başlamadan loglarda tutulabilmesi için kullanıcı adı ve ma
 ```
 git config <parametre> core.editor "<program>"
 ```
-\
 &nbsp;
 Mevcut yapılandırmaları görüntülemek için bunlardan birisini yazabiliriz;
 ```
@@ -174,7 +171,6 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 	###	Merge Türleri
 	*	#### Fast Forward
 		![merge ff](../IMGs/git/git-mergeff.png "merge ff")
-\
 &nbsp;&nbsp;&nbsp;
 		En yaygın merge türüdür. Git'e eklenen dosyaların commit loglarının aynısını kullanarak birleştirir. Eski kodlarda bir değişiklik olmaz. Geçmişi tek çizgi olarak gösterir.
 
@@ -182,7 +178,6 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 
 	*	#### Recursive
 		![merge recursive](../IMGs/git/git-mergerecursive.png "merge recursive")
-\
 &nbsp;&nbsp;&nbsp;
 		Recursice 2 HEAD üzerinde çalışır. Recursive yeniden adlandırma içeren birleştirmeleri algılayabilir ve işleyebilir, ancak algılanan kopyaları kullanamaz. Bir dalı çekme veya birleştirme yaparken varsayılan olarak kullanılır.
 
@@ -197,7 +192,6 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 
 	*	#### Ours
 		![ours](../IMGs/git/git-mergeours.png "ours")
-\
 &nbsp;&nbsp;&nbsp;
 		Ours 1den fazla branchde çalışır. Merge sonucu çıktısı her zaman mevcut branch'in HEADinkidir. Sadece ortak noktaları merge eder diğer dallardan gelen tüm değişiklikleri yok sayar.
 
@@ -205,7 +199,6 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 
 	*	#### Octopus
 		![octopus](../IMGs/git/git-mergeoctopus.png "octopus")
-\
 &nbsp;&nbsp;&nbsp;
 		Octopus 2den fazla branch girildiğinde otomatik devreye girer. Eğer çakışmalar olursa onları düzeltmeyi reddeder, manuel olarak düzeltilmesi gerekir.
 
@@ -213,7 +206,6 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 	*	#### Resolve
 		![resolve](https://media.geeksforgeeks.org/wp-content/uploads/20191231173643/Resolve-Merge-Strategy.png "resolve")
 		[resim linki](https://www.geeksforgeeks.org/merge-strategies-in-git/)
-\
 &nbsp;&nbsp;&nbsp;
 		Resolve '3-way merge' algoritmasını kullanarak sadece 2 tane Headi çözer. Çapraz merge belirsizliklerini dikkatlice tespit etmeye çalışır. Genellikle güvenli ve hızlı olarak kabul edilir.
 
@@ -221,7 +213,6 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 
 	*	#### Subtree
 		![subtree](../IMGs/git/git-mergesubtree.png "subtree")
-\
 &nbsp;&nbsp;&nbsp;
 		subtree, recursive merge uzantısıdır. A ve Byi Merge etmek istediğinizde;
 		 eğer B, A'nın alt ağacına karşılık geliyorsa B, A'nın ağaç yapısını yansıtacak şekilde güncellenir, Bu güncelleme ayrıca A ve B arasında paylaşılan ortak ata ağacına da yapılır.
@@ -229,10 +220,8 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 		 	git merge -s subtree <branchA> <branchB>
 *	## **Rebase**
 	![rebase](../IMGs/git/git-rebase.png "rebase")
-\
 &nbsp;&nbsp;&nbsp;
 	```Git Rebase``` ile ```Git Merge``` benzer işlevleri yapmak için kullanılıyor. Temel olarak 2side bir Branchdeki değişiklikleri diğerine aktarmak için kullanılıyor.
-\
 &nbsp;&nbsp;&nbsp;
 	Merge ile birleştirme yapıldığında loglarda Merge işlemini gösteren bir commit bulunurken, Rebase ile yapıldığında loglarda sanki 2 Branchdeki değişiklikler tek branchde yapılmış gibi gözükür.
 	```
@@ -240,7 +229,6 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
 	```
 	### **Merge vs Rebase**
 	![Rebase vs Merge](../IMGs/git/git-rebasevsmerge.png "Rebase vs Merge")
-\
 &nbsp;&nbsp;&nbsp;
 
 Git üzerinden branching ağını grafiksel olarak görmek için "git a dog";
