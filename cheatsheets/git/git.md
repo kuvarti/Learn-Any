@@ -73,7 +73,7 @@ Başlangıç seviyesi için bilinmesi gereken komutlar;
  *	### **.gitignore**
 	&nbsp;&nbsp;&nbsp;Klasörün içindeki bazı dosyaları git'in umursamamasını(yok saymasını) istediğimiz zaman gitignore tam aradığımız şey. ```.gitignore``` adında bir dosya oluşturup içine satırlar halinde yoksaymak istediğimiz dosyaları yazabiliriz.
  * ### **git checkout/Reset**
-   * **Checkout** -> Git'e eklenen dosyaların durumunu geri alır, branch veya tag değiştirir.
+   * **Checkout** -> Git'e eklenen dosyaların durumunu geri alır, commit, branch veya tag değiştirir.
 		```
 		git checkout <commit/branch>
 		```
